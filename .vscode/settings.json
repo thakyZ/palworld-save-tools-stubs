@@ -1,0 +1,12 @@
+{
+  "python.analysis.extraPaths": [
+    "parameterized",
+    "palworld_save_tools",
+    "palworld_save_tools/commands",
+    "palworld_save_tools/rawdata"
+  ],
+  "python.autoComplete.extraPaths": [
+    "parameterized",
+    "palworld_save_tools/**"
+  ]
+}

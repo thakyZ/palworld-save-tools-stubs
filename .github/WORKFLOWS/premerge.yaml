@@ -1,0 +1,51 @@
+name: Premerge
+on: [push]
+jobs:
+  linters:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - name: pre-commit
+        uses: pre-commit/action@v3.0.0
+  tests:
+    name: Python tests
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12', 'pypy3.9', 'pypy3.10']
+        os: [ubuntu-latest, windows-latest]
+        force-stdlib: [true, false]
+        exclude:
+          # all the "performance" libs tend to break on pypy
+          - python-version: 'pypy3.9'
+            force-stdlib: false
+          - python-version: 'pypy3.10'
+            force-stdlib: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dev dependencies
+        run: |
+          pip install '.[tests]'
+      - name: Install performance dependencies
+        if: ${{ !matrix.force-stdlib }}
+        run: |
+          pip install '.[performance]'
+      - name: Run tests (with performance dependencies)
+        if: ${{ !matrix.force-stdlib }}
+        run: |
+          python -m unittest -v
+      - name: Run tests (stdlib only)
+        if: ${{ matrix.force-stdlib }}
+        env:
+          FORCE_STDLIB_ONLY: 1
+        run: |
+          python -m unittest -v

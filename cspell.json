@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [
+    "en_US",
+    "en-gb",
+    "companies",
+    "softwareTerms",
+    "misc",
+    "typescript",
+    "node",
+    "php",
+    "go",
+    "python",
+    "powershell",
+    "html",
+    "css",
+    "csharp",
+    "latex",
+    "bash",
+    "fonts",
+    "filetypes",
+    "npm",
+    "palworld"
+  ],
+  "words": [
+    "emcompassing",
+    "fstring",
+    "ftransform",
+    "Jetbrains",
+    "parameterizing",
+    "redef",
+    "serializeint",
+    "tarray",
+    "uesave"
+  ],
+  "ignoreWords": [],
+  "import": []
+}

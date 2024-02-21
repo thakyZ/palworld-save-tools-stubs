@@ -1,0 +1,33 @@
+name: Package files
+on: [push]
+jobs:
+  package-windows-zip:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Git describe
+        id: ghd
+        uses: proudust/gh-describe@v1
+      - shell: bash
+        run: |
+          mkdir -p dist
+          cp LICENSE dist/
+          cp README.md dist/
+          cp palworld_save_tools_types/commands/convert.py dist/
+          cp -r palworld_save_tools_types dist/
+          cp convenience_tools/* dist/
+          cd dist
+          zip -r ../palworld-save-tools-types-windows-${{steps.ghd.outputs.describe}}.zip *
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: palworld-save-tools-types-windows-${{steps.ghd.outputs.describe}}.zip
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: palworld-save-tools-types-windows-${{steps.ghd.outputs.describe}}.zip
+          generate_release_notes: true

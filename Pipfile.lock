@@ -1,0 +1,40 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "cfff57fdd1ffe69e2fdc1132dcb17f15a355c7a8099c22640ccd984412630a05"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_full_version": "3.12.1",
+            "python_version": "3.12"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "palworld-save-tools": {
+            "hashes": [
+                "sha256:eaf80d0ae7e823907399dd15f8d6b9d8793095c5fb5203e8717643d0cc69fcc1",
+                "sha256:ef00599e168a3ad75a981ef251ea867ede85a02c7b8e226bac3a059c243f4950"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==0.19.0"
+        },
+        "parameterized": {
+            "hashes": [
+                "sha256:4e0758e3d41bea3bbd05ec14fc2c24736723f243b28d702081aef438c9372b1b",
+                "sha256:7fc905272cefa4f364c1a3429cbbe9c0f98b793988efb5bf90aac80f08db09b1"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==0.9.0"
+        }
+    },
+    "develop": {}
+}
