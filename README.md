@@ -9,15 +9,10 @@ Fixes types in the `palworld_save_tools` module.
 
 ## Install
 
-1. Download the repository or clone it via
+Download the repository or clone and install via your instance of PIP
 
-    ```shell
-    git clone https://github.com/thakyz/palworld-save-tools-types.git palworld-save-tools-types
-    ```
-
-2. Install via your instance of PIP
-
-    ```shell
-    cd palworld-save-tools-types
-    pip install .
-    ```
+```shell
+git clone https://github.com/thakyz/palworld-save-tools-types.git palworld-save-tools-types
+cd palworld-save-tools-types
+pip install .
+```
