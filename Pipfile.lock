@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cfff57fdd1ffe69e2fdc1132dcb17f15a355c7a8099c22640ccd984412630a05"
+            "sha256": "c57c07b405e0fcc0f5bba23fe0f343528aef240395d3a46b6458081ca528cd03"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -25,6 +25,9 @@
             "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==0.19.0"
+        },
+        "palworld-save-tools-types": {
+            "file": "."
         },
         "parameterized": {
             "hashes": [
