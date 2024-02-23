@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "palworld-save-tools-types"
-authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" }]
-description = "Tools for converting Palworld .sav files to JSON and back"
+authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" },{ name = "Neko Boi Nick", email = "" }]
+description = "Python stub file for repository cheahjs/palworld-save-tools"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
