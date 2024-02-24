@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "palworld-save-tools-types"
+name = "palworld-save-tools-stubs"
 authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" },{ name = "Neko Boi Nick", email = "" }]
 description = "Python stub file for repository cheahjs/palworld-save-tools"
 readme = "README.md"
@@ -16,11 +16,11 @@ classifiers = [
 dynamic = ["version"]
 
 [project.urls]
-Homepage = "https://github.com/thakyz/palworld-save-tools-types"
-Issues = "https://github.com/thakyz/palworld-save-tools-types/issues"
+Homepage = "https://github.com/thakyz/palworld-save-tools-stubs"
+Issues = "https://github.com/thakyz/palworld-save-tools-stubs/issues"
 
 [project.scripts]
-palworld-save-tools-types = "palworld_save_tools_types.commands.convert:main"
+palworld-save-tools-stubs = "palworld_save_tools_stubs.commands.convert:main"
 
 [project.optional-dependencies]
 # These are dependencies only for tests
