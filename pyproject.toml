@@ -20,7 +20,7 @@ Homepage = "https://github.com/thakyz/palworld-save-tools-stubs"
 Issues = "https://github.com/thakyz/palworld-save-tools-stubs/issues"
 
 [tool.coverage.paths]
-source = ["lxml-stubs"]
+source = ["palworld-save-tools-stubs"]
 
 [tool.isort]
 line_length = 88
