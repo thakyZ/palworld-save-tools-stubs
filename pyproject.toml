@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "palworld-save-tools-stubs"
-authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" },{ name = "Neko Boi Nick", email = "" }]
+authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" },{ name = "Neko Boi Nick", email = "950594+thakyZ@users.noreply.github.com" }]
 description = "Python stub file for repository cheahjs/palworld-save-tools"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -19,19 +19,21 @@ dynamic = ["version"]
 Homepage = "https://github.com/thakyz/palworld-save-tools-stubs"
 Issues = "https://github.com/thakyz/palworld-save-tools-stubs/issues"
 
-[project.scripts]
-palworld-save-tools-stubs = "palworld_save_tools_stubs.commands.convert:main"
+[tool.coverage.paths]
+source = ["lxml-stubs"]
 
-[project.optional-dependencies]
-# These are dependencies only for tests
-# Default usage of the library must not rely on any external dependencies!
-tests = [
-  "parameterized==0.9.0",
-  "mypy==1.8.0"
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+use_parentheses = true
+
+[tool.pyright]
+include = ["palworld-save-tools-stubs"]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__"
 ]
-# Additional dependencies to provide more performant implementations
-performance = ["recordclass"]
-
-[[tool.mypy.overrides]]
-module = ["recordclass", "parameterized"]
-ignore_missing_imports = true
+reportPrivateUsage = false
