@@ -1,39 +1,45 @@
-[build-system]
-requires = ["hatchling", "hatch-vcs"]
-build-backend = "hatchling.build"
-
-[project]
+[tool.poetry]
 name = "palworld-save-tools-stubs"
-authors = [{ name = "Jun Siang Cheah", email = "me@jscheah.me" },{ name = "Neko Boi Nick", email = "950594+thakyZ@users.noreply.github.com" }]
+version = "1.0.0"
 description = "Python stub file for repository cheahjs/palworld-save-tools"
+authors = ["thakyZ <950594+thakyZ@users.noreply.github.com>, Jun Siang Cheah <me@jscheah.me>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.9"
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-]
-dynamic = ["version"]
+homepage  = "https://github.com/thakyz/palworld-save-tools-stubs/"
+repository   = "https://github.com/thakyz/palworld-save-tools-stubs"
+keywords = ["palworld-save-tools", "palworld", "type-annotations", "pyright", "mypy", "palworld-save-tools-stubs"]
+packages = [{ include = "palworld-save-tools-stubs" }]
 
-[project.urls]
-Homepage = "https://github.com/thakyz/palworld-save-tools-stubs"
-Issues = "https://github.com/thakyz/palworld-save-tools-stubs/issues"
+[tool.poetry.dependencies]
+python = ">=3.9"
+palworld-save-tools = "^0.19.0"
+pip = "^24.0"
+black = "^24.2.0"
+isort = "^5.13.2"
 
-[tool.coverage.paths]
-source = ["palworld-save-tools-stubs"]
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+flake8 = "^7.0.0"
 
-[tool.isort]
-line_length = 88
-multi_line_output = 3
-include_trailing_comma = true
-balanced_wrapping = true
-default_section = "THIRDPARTY"
-use_parentheses = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.pyright]
 include = ["palworld-save-tools-stubs"]
-exclude = [
-    "**/node_modules",
-    "**/__pycache__"
+exclude = ["tests"]
+ignore = [
+    ".venv",
+    "**/__pycache__",
+    "**/build",
+    "typestubs",
+    "examples",
 ]
-reportPrivateUsage = false
+typeCheckingMode = "strict"
+reportMissingImports = "error"
+reportMissingTypeStubs = "error"
+reportMissingTypeArgument = "error"
+reportIncompatibleMethodOverride = "error"
+reportIncompatibleVariableOverride = "error"
+reportUnknownParameterType = "error"
+pythonVersion = "3.9"
