@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-
-#pyright: reportIncompatibleMethodOverride=false, reportMissingTypeStubs=false
+# pyright: reportIncompatibleMethodOverride=false, reportArgumentType=false
 
 import json
 import uuid

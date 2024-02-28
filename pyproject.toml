@@ -8,18 +8,19 @@ readme = "README.md"
 homepage  = "https://github.com/thakyz/palworld-save-tools-stubs/"
 repository   = "https://github.com/thakyz/palworld-save-tools-stubs"
 keywords = ["palworld-save-tools", "palworld", "type-annotations", "pyright", "mypy", "palworld-save-tools-stubs"]
-packages = [{ include = "palworld-save-tools-stubs/**/*.pyi" }]
+packages = [{ include = "palworld-save-tools-stubs/**/*.pyi" }, { include = "palworld-save-tools-stubs/py.typed" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
-palworld-save-tools = "^0.19.0"
+palworld-save-tools = "*"
+typing-extensions = "^4.10.0"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.8.0"
-flake8 = "^7.0.0"
-pip = "^24.0"
-black = "^24.2.0"
-isort = "^5.13.2"
+mypy = "*"
+flake8 = "*"
+pip = "*"
+black = "*"
+isort = "*"
 
 [build-system]
 requires = ["poetry-core"]
@@ -29,7 +30,7 @@ build-backend = "poetry.core.masonry.api"
 include = ["palworld-save-tools-stubs"]
 exclude = ["tests"]
 ignore = [
-    ".venv",
+    "env",
     "**/__pycache__",
     "**/build",
     "typestubs",
@@ -39,6 +40,7 @@ typeCheckingMode = "strict"
 reportMissingImports = "error"
 reportMissingTypeStubs = "error"
 reportMissingTypeArgument = "error"
+reportArgumentType = "off"
 reportIncompatibleMethodOverride = "error"
 reportIncompatibleVariableOverride = "error"
 reportUnknownParameterType = "error"

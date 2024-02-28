@@ -1,8 +1,11 @@
+# pyright: reportArgumentType=false
+
 import io
 from io import TextIOWrapper, BytesIO
 import os
 import uuid
 from typing import Any, Callable, Literal, Optional, Sequence, Union
+
 
 # Alias stdlib types to avoid name conflicts
 _float = float
@@ -14,6 +17,7 @@ _uint64 = int
 _uint = int
 _int16 = int
 _uint16 = int
+
 
 class UUID:
     __slots__: tuple[Literal["raw_bytes"], Literal["parsed_uuid"], Literal["parsed_str"]]

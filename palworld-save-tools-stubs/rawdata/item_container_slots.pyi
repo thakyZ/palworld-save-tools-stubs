@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-
-
-#pyright: reportMissingTypeStubs=false
-
 from typing import Any, Sequence, Optional
 
 from palworld_save_tools.archive import FArchiveReader, FArchiveWriter

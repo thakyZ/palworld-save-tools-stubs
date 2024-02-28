@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-
-# pyright: reportMissingTypeStubs=false
+# pyright: reportArgumentType=false
 
 from typing import Any, Callable, Literal
 

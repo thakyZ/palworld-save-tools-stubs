@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
-
+# pyright: reportIncompatibleMethodOverride=false, reportArgumentType=false
 
 from typing import Literal
+
 
 MAGIC_BYTES: Literal[b"Plz"]
 

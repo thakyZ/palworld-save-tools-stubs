@@ -1,16 +1,17 @@
-#!/usr/bin/env python3
-
-# pyright: reportMissingTypeStubs=false
+# pyright: reportArgumentType=false
+# cSpell:words paltypes
 
 from typing import Any
 
 from palworld_save_tools.archive import FArchiveReader, FArchiveWriter, UUID
 
-from paltypes import PalworldTypeHints, PalworldCustomProperties
+from .paltypes import PalworldTypeHints, PalworldCustomProperties
+
 
 def custom_version_reader(reader: FArchiveReader) -> tuple[UUID, int]: ...
 
 def custom_version_writer(writer: FArchiveWriter, value: tuple[str, int]) -> None: ...
+
 
 class GvasHeader:
     magic: int
