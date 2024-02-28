@@ -8,7 +8,7 @@ readme = "README.md"
 homepage  = "https://github.com/thakyz/palworld-save-tools-stubs/"
 repository   = "https://github.com/thakyz/palworld-save-tools-stubs"
 keywords = ["palworld-save-tools", "palworld", "type-annotations", "pyright", "mypy", "palworld-save-tools-stubs"]
-packages = [{ include = "palworld-save-tools-stubs/**/*.pyi" }, { include = "palworld-save-tools-stubs/py.typed" }]
+packages = [{ include = "palworld_save_tools-stubs/**/*.pyi" }, { include = "palworld_save_tools-stubs/py.typed" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
@@ -27,7 +27,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pyright]
-include = ["palworld-save-tools-stubs"]
+include = ["palworld_save_tools-stubs"]
 exclude = ["tests"]
 ignore = [
     "env",
