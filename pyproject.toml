@@ -8,18 +8,18 @@ readme = "README.md"
 homepage  = "https://github.com/thakyz/palworld-save-tools-stubs/"
 repository   = "https://github.com/thakyz/palworld-save-tools-stubs"
 keywords = ["palworld-save-tools", "palworld", "type-annotations", "pyright", "mypy", "palworld-save-tools-stubs"]
-packages = [{ include = "palworld-save-tools-stubs" }]
+packages = [{ include = "palworld-save-tools-stubs/**/*.pyi" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
 palworld-save-tools = "^0.19.0"
-pip = "^24.0"
-black = "^24.2.0"
-isort = "^5.13.2"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.8.0"
 flake8 = "^7.0.0"
+pip = "^24.0"
+black = "^24.2.0"
+isort = "^5.13.2"
 
 [build-system]
 requires = ["poetry-core"]
